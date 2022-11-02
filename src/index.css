@@ -1,13 +1,62 @@
-body {
+*{
+  font-family: 'Josefin Sans', sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.active-link, .not-active-link{
+  width: 186px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  margin-top: 10px;
+
 }
+.active-link, .active-link:hover{
+  background: #7937CB;
+  border-radius: 8px;
+  color: #F0EEFF;
+}
+
+.not-active-link{
+  color: #9462F2;
+  border-radius: 8px;
+}
+
+.not-active-link:hover{
+  color: #fff;
+  background-color:  #B5A4FD;
+}
+
+.form-control{
+  background: #FFFFFF;
+  border: 2px solid #98AAB3;
+  border-radius: 4px;
+  color:  #67808E;
+  font-weight: 400;
+  font-size: 16px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.form-select{
+  
+  border: 2px solid #98AAB3;
+  border-radius: 4px;
+  color:  #67808E;;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.form-control:active,
+.form-select:active{
+  
+  border: 2px solid #A280F9;
+}
+.form-control:focus,
+.form-select:focus{
+  color:  #67808E;
+  border: 2px solid #A280F9;
+  box-shadow: 0 1px 2px 0 #A280F9, 0 1.5px 2.5px 0 #7937CB;
+}
+

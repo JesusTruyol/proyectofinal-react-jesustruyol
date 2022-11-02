@@ -1,0 +1,33 @@
+.slider-control-bottomcenter{
+ display: none;
+}
+.slider-control-centerleft{
+  left: -10px;
+  position: absolute;
+  
+}
+.btn-control{
+  color:blueviolet;
+  border:0;
+  background-color: rgb(0,0,0,0);
+}
+.slide{
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+/* Movil y Tablet hasta 768 pixeles*/
+@media screen and (max-width: 768px){
+  .slider-control-centerright{
+    display: none;
+  }
+  .slider-control-centerleft{
+    display: none;
+  }
+  .slider-container{
+    display: flex;
+    
+  }
+  
+}

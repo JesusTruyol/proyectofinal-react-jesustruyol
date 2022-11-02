@@ -1,0 +1,19 @@
+
+.title-filtros{
+  margin-top: 120px;
+  color: #98AAB3;
+  font-size: 24px;
+  font-weight: 700;
+  
+}
+.filtros{
+  z-index: 1;
+}
+
+.productos{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  padding: 0 80px;
+}

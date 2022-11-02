@@ -1,0 +1,67 @@
+.container-tienda{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  margin: 0px;
+  top:100px;
+  bottom: 0;
+}
+.searchBar{
+  width: 100%;
+  margin-bottom: 5%;
+}
+.carousel{
+  width: 100%;
+  padding: 0;
+ 
+
+}
+.carousel-2, .carousel-3,.carousel-4{
+  display: none;
+}
+/* Movil  520 pixeles*/
+@media screen and (min-width: 520px){
+  .carousel-2{
+    display: block;
+  }
+  .carousel-3, .carousel-4,.carousel-1{
+    display: none;
+  }
+}
+@media screen and (min-width: 580px){
+  .carousel-3{
+    display: block;
+  }
+  .carousel-2, .carousel-4,.carousel-1{
+    display: none;
+  }
+}
+
+/* Desktop  desde 768 pixeles*/
+@media screen and (min-width: 768px){
+
+  .carousel-4{
+    display: block;
+  }
+  .carousel-2, .carousel-3,.carousel-1{
+    display: none;
+  }
+  
+.container-tienda{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 85px;
+  padding: 0 70px 0px 70px;
+  overflow: auto;
+}
+
+.carousel{
+
+  padding: 0 200px;
+ 
+
+}
+}

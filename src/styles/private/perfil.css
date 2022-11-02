@@ -1,0 +1,132 @@
+
+/* Tablet */
+@media screen and (min-width: 500px){}
+
+/* Descktor */
+@media screen and (min-width: 960px){}
+
+.container-main-perfil{
+  display: flex;
+  flex-direction: column;
+  margin-left: 410px;
+  margin-right: 60px;
+}
+.container-perfil{
+  display: flex;
+  flex-direction: row;
+
+}
+.container-form-perfil{
+  width: 35%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.form-group-perfil{
+  display: flex;
+  align-items: center;
+
+}
+.form-control-perfil{
+  width: 272px;
+}
+
+.img-perfil{
+  width: 50%;
+  margin-left: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+.img{
+  width:300px;
+  height: 300px;
+  border-radius: 48px;
+
+  background-color: blueviolet;
+}
+
+.form-control-perfil-descripcion,
+.btn-guardar-perfil{
+  margin-top: 1.5rem;
+  margin-right: 130px;
+}
+.btn-guardar-perfil{
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Movil  520 pixeles*/
+@media screen and (max-width: 520px){
+  .container-main-perfil{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:90px;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    margin: 0px;
+    padding: 0 40px;
+    overflow: auto;
+    
+  }
+
+  .container-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+  
+  }
+ 
+  .container-form-perfil{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .img-perfil{
+    width: 100%;
+    margin: 0;
+  }
+
+  .img{
+    width: 100%;
+    height: 40vh;
+    border-radius: 48px;
+  
+    background-color: blueviolet;
+  }
+
+  .form-group-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+  }
+  .descripcion{
+    width: 100%;
+    margin-top: 20px;
+  }
+  .form-control-perfil-descripcion{
+    width: 100%;
+    margin: 0;
+  }
+  .btn-guardar-perfil{
+    width: 100%;
+    justify-content: center;
+    margin: 20px 0 90px 0;
+  }
+  .btn-guardar-perfil button{
+    width: 100%;
+  }
+}

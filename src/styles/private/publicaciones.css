@@ -1,0 +1,47 @@
+
+
+
+.button-agregar{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-right: 120px;
+
+
+}
+.btn-agregar-producto-movil{
+  display: none;
+}
+
+
+/* Movil  520 pixeles*/
+@media screen and (max-width: 520px){
+ 
+
+  .button-agregar{
+    position: absolute;
+    z-index: 111;
+    right: -115px;
+    bottom: 25px;
+  }
+  button.btn-agregar-producto{
+    display: none;
+  }
+  .button-agregar > .btn-agregar-producto-movil:before{
+    display: block;
+    content: "+";
+    
+  }
+  .btn-agregar-producto-movil{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+  }
+  
+}

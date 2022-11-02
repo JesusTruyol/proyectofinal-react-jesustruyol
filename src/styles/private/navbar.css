@@ -1,0 +1,117 @@
+
+
+.navbar-main{
+  background-color: rgba(148, 98, 242, 1);
+  
+  border-radius: 0px 0px 40px 40px;
+  margin: 0 30px;
+  z-index: 1;
+  
+}
+.container-navbar{
+  width: 100%;
+  margin: 0 8px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  --bs-nav-link-color: black;
+  --bs-nav-link-hover-color:#9462F2 ;
+}
+.nav-tabs {
+  --bs-nav-tabs-border-width: 4px;
+  --bs-nav-tabs-border-color: #fff;
+  --bs-nav-tabs-link-hover-border-color: #fff;
+  --bs-nav-tabs-link-active-color: #9462F2;
+  --bs-nav-tabs-link-active-border-color: #fff #fff #8945E6;
+}
+
+.nav-link{
+  font-size: 24px;
+  font-weight: 700  ;
+}
+.logo{
+  width: 200px;
+  height: 70px;
+  border-radius: 48px;
+  background-color: #B5A4FD;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropdown-main{
+  background-color: rgba(162, 128, 249, 1);
+  display: flex;
+  align-items: center;
+  border-radius: 48px;
+  color: rgba(240, 238, 255, 1);
+  margin: 2px 0;
+  
+}
+
+.dropdown-main:active{
+  background: #9462F2;
+  border: 2px solid #462872;
+  margin: 0;
+  color: rgba(240, 238, 255, 1);
+}
+.dropdown-menu{
+  z-index: 1;
+  right: 2000px;
+}
+.dropdown-item:hover{
+  background-color: #fff;
+}
+
+.btn-primary {
+  --bs-btn-color: #F0EEFF;
+  --bs-btn-bg: rgba(162, 128, 249, 1);
+  --bs-btn-border-color: none;
+  --bs-btn-hover-color: #F0EEFF;
+  --bs-btn-hover-bg: #B5A4FD;
+  --bs-btn-hover-border-color: #B5A4FD;
+  --bs-btn-focus-shadow-rgb: 181, 164, 253, 1;
+  --bs-btn-active-color: #F0EEFF;
+  --bs-btn-active-bg: #7937CB;
+  --bs-btn-active-border-color: #7937CB;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);  
+}
+
+.button-sesion{
+  display: flex;
+  align-items: center;
+}
+
+
+.logo-usuario{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #F0EEFF;
+  border: 2px solid #462872;
+  color: #462872;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.logo-usuario p{
+   margin: 0;
+}
+
+.usuario{
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+/* Movil  520 pixeles*/
+@media screen and (max-width: 520px){
+  .usuario{
+    display: none;
+  }
+}

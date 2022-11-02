@@ -1,0 +1,79 @@
+.card-container {
+  width: 279px;
+  padding: 10px;
+  margin: 20px 40px;
+  border: 1px solid #EBEFF2;
+  border-radius: 24px;
+  background-color: #b4a4fdcb;
+
+}
+
+.card-container:hover{
+  box-shadow: 0px 4px 8px 0 rgba(235, 239, 242, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-img{
+  width: 100%;
+  height: 30vh;
+  border-radius: 24px;
+}
+
+.card-title{
+  font-size: 16px;
+  font-weight: 700;
+  color: #032C45;
+}
+.card-price{
+  font-size: 14px;
+  font-weight: 700;
+  color: #355769;
+}
+
+.buttons{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.button-glas{
+  width: 56px;
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #9462F2;
+  border: #9462F2;
+  color: #ffff;
+}
+
+.button-heart{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#355769;
+  background-color: #ffff;
+}
+.button-heart:hover{
+  background-color: #CDD5DA;
+}
+
+.button-heart:active{
+ background-color: #67808E;
+}
+
+/* Movil  520 pixeles*/
+@media screen and (max-width: 520px){
+  
+  
+}
+
+/* Desktop  desde 768 pixeles*/
+@media screen and (min-width: 768px){
+  .card-container {
+    width: 274px;
+    margin: 10px;
+    background-color: #ffff;
+    }
+}

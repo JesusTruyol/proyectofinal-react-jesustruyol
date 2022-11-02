@@ -1,0 +1,44 @@
+[
+  {
+    "icon":"fa-solid fa-couch fa-2xl",
+    "categoria":"Hogar",
+    "name":"home",
+    "img":"https://source.unsplash.com/random/?home",
+    "filled":false
+  },
+  {
+    "icon":"fa-solid fa-laptop fa-2xl",
+    "categoria":"Tecnología",
+    "name":"technology",
+    "img":"https://source.unsplash.com/random/?technology",
+    "filled":false
+  },
+  {
+    "icon":"fa-solid fa-shirt fa-2xl",
+    "categoria":"Moda",
+    "name":"fashion",
+    "img":"https://source.unsplash.com/random/?fashion",
+    "filled":false
+  },
+  {
+    "icon":"fa-solid fa-car-side fa-2xl",
+    "categoria":"Automotriz",
+    "name":"automotive",
+    "img":"https://source.unsplash.com/random/?automotive",
+    "filled":false
+  },
+  {
+    "icon":"fa-solid fa-robot fa-2xl",
+    "categoria":"Juguetes",
+    "name":"toys",
+    "img":"https://source.unsplash.com/random/?toys",
+    "filled":false
+  },
+  {
+    "icon":"fa-solid fa-dog fa-2xl",
+    "categoria":"Mascotas",
+    "name":"pet",
+    "img":"https://source.unsplash.com/random/?pet",
+    "filled":false
+  }
+]

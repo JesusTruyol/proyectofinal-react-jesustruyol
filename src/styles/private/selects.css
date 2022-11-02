@@ -1,0 +1,21 @@
+.form-label{
+  color: #032C45;
+  font-weight: 700;
+}
+.form-select{
+  color: #67808E;
+  font-weight: 400;
+  border: 2px solid #67808E;
+  border-radius: 4px;
+}
+
+.form-check-input{
+  
+  border-radius: 4px;
+}
+
+.option-select:hover{
+  color: #fff;
+  background-color: #9462F2;
+
+}

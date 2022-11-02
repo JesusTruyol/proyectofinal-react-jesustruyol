@@ -1,0 +1,12 @@
+
+.container-left{
+  display: block;
+}
+
+
+/* Movil  520 pixeles*/
+@media screen and (max-width: 520px){
+  .container-left{
+    display: none;
+  }
+}
