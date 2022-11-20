@@ -1,0 +1,108 @@
+.table-main{
+  margin: 5rem 2.5rem;
+}
+
+.data-table{
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-name{
+  text-align: center;
+}
+
+.table-price{
+  color:rgb(3, 213, 69);
+}
+
+.operador:hover { cursor: pointer; } 
+
+.subtract
+{
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* Movil */
+@media screen and (max-width: 500px){
+  .table-main{
+    margin: 5rem 2.5rem;
+  }
+  .img-table{
+    width: 50%;
+    height: 100%;
+    }
+    .description-table{
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .operadores{
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    }
+    .table-price{
+      text-align: center;
+      font-size: 26px;
+    }
+}
+/* Tablet */
+@media screen and (min-width: 500px){
+  .table-main{
+    margin: 5rem 2.5rem;
+  }
+  .img-table{
+    width: 50%;
+    height: 100%;
+    }
+    .description-table{
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .operadores{
+      width: 80%;
+      display: flex;
+      flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  
+    }
+    .table-price{
+      margin-top: 10px;
+      text-align: center;
+      font-size: 26px;
+    }
+}
+/* Descktor */
+@media screen and (min-width: 960px){
+  .table-main{
+    margin: 5rem 6rem;
+  }
+  .img-table{
+    width: 10%;
+    height: 100%;
+    }
+    .description-table{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .operadores{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .table-price{
+      text-align: end;
+    }
+}
+

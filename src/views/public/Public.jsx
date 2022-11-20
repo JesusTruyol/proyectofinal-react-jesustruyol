@@ -1,6 +1,6 @@
 import React from 'react'
-import NavbarLogin from '../../components/public/NavbarLogin'
-import Login from './Login'
+import NavbarLogin from '../../components/public/NavbarLogin/NavbarLogin'
+import Login from './Login/Login'
 
 export const Public = () => {
   return (

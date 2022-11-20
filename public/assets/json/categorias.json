@@ -1,0 +1,32 @@
+[
+  {
+    "icon":"fa-solid fa-couch fa-2xl",
+    "category":"Hogar",
+    "name":"home"
+  },
+  {
+    "icon":"fa-solid fa-laptop fa-2xl",
+    "category":"Tecnología",
+    "name":"technology"
+  },
+  {
+    "icon":"fa-solid fa-shirt fa-2xl",
+    "category":"Moda",
+    "name":"fashion"
+  },
+  {
+    "icon":"fa-solid fa-car-side fa-2xl",
+    "category":"Automotriz",
+    "name":"automotive"
+  },
+  {
+    "icon":"fa-solid fa-robot fa-2xl",
+    "category":"Juguetes",
+    "name":"toys"
+  },
+  {
+    "icon":"fa-solid fa-dog fa-2xl",
+    "category":"Mascotas",
+    "name":"pet"
+  }
+]

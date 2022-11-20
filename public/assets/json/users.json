@@ -1,0 +1,98 @@
+[
+  {
+    "nameUser":"Jtruyol",
+    "name":"Jesus Truyol",
+    "email":"jesus@jesus.com",
+    "password":"1234.",
+    "region":"Metropolitana de Santiago",
+    "provincia":"Santiago",
+    "comuna":"Lo Prado",
+    "phono":"",
+    "description":"",
+    "imgUser":"",
+    "favoriteProducts":[],
+    "shoppinProducts":[]
+  },
+  { 
+    "nameUser":"willop",
+    "name":"Willow Cull",
+    "email":"willow@willow.com",
+    "password": "1234",
+    "region":"Metropolitana de Santiago",
+    "provincia":"Santiago",
+    "comuna":"Independencia",
+    "phono":"555555555",
+    "description":"Trabajadora en función de la excelencia",
+    "imgUser":"https://xsgames.co/randomusers/assets/avatars/female/2.jpg",
+    "favoriteProducts":[],
+    "shoppinProducts":[]
+  },
+  {
+    "nameUser":"RobILaKe",
+    "name":"Fabiana Manemann",
+    "email":"Fabiana_Manemann@gmail.com",
+    "password": "1234",
+    "region":"Metropolitana de Santiago",
+    "provincia":"Santiago",
+    "comuna":"Maipú",
+    "phono":"66453211",
+    "description":"Logrando tener para ti las nuevas tecnologia a tu alcance, con descuentos increibles en articulos usados. Embajadora Logitech",
+    "imgUser":"https://xsgames.co/randomusers/assets/avatars/female/9.jpg",
+    "favoriteProducts":[],
+    "shoppinProducts":[]
+  },
+  {
+    "nameUser":"onViRmAG",
+    "name":"Pia Nones",
+    "email":"Pia_Nones@gmail.com",
+    "password": "1234gatu",
+    "region":"Valparaíso",
+    "provincia":"Valparaíso",
+    "comuna":"Juan Fernández",
+    "phono":"6749388",
+    "description":"Vendo mis propias creaciones y secondhand clothes",
+    "imgUser":"https://xsgames.co/randomusers/assets/avatars/female/66.jpg",
+    "favoriteProducts":[],
+    "shoppinProducts":[]
+  },
+  {
+    "nameUser":"AbELWosi",
+    "name":"Gilberto Marquez",
+    "email":"Gilberto_Marquez@gmail.com",
+    "password": "1234",
+    "region":"Valparaíso",
+    "provincia":"Valparaíso",
+    "comuna":"Quintero",
+    "phono":"6583456",
+    "description":"Todo lo que necesitas nuevo o usado en excelente estado",
+    "imgUser":"https://xsgames.co/randomusers/assets/avatars/male/76.jpg",
+    "favoriteProducts":[],
+    "shoppinProducts":[]
+  },
+  {
+    "nameUser":"Uno",
+    "name":"Uno",
+    "email":"uno",
+    "password": "1",
+    "region":"Valparaíso",
+    "provincia":"Valparaíso",
+    "comuna":"Quintero",
+    "phono":"6583456",
+    "description":"Todo lo que necesitas nuevo o usado en excelente estado",
+    "imgUser":"https://xsgames.co/randomusers/assets/avatars/male/76.jpg",
+    "favoriteProducts":[],
+    "shoppinProducts":[
+                        {
+                          "id":"0",
+                          "producByEmail":"jesus@jesus.com",
+                          "quantity":2
+                        },
+                        {
+                          "id":"11",
+                          "producByEmail":"willow@willow.com",
+                          "quantity":4
+                        }
+                      ]
+  }
+]
+
