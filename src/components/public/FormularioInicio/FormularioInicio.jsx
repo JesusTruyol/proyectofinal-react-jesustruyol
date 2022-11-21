@@ -19,22 +19,22 @@ export const FormularioInicio = () => {
 
     const setEmailForm= (value) => {
       setEmail(value)
-      let validation = db.validEmailForm(value)
-      setDisabledPassword(!validation)
-      
+      // let validation = db.validEmailForm(value)
+      // setDisabledPassword(!validation)
+      setDisabledPassword(false)
       
   
     }
 
     const setPasswordForm = (value) =>{
       setPassword(value)
-      let validation = db.validPasswordForm(value)
-      setDisabledButton(!validation)
-      
+      // let validation = db.validPasswordForm(value)
+      // setDisabledButton(!validation)
+      setDisabledButton(false)
     }
 
     const totalPriceShoppin=()=>{
-      console.log('inicio precio')
+      console.log('ini precio')
       let indexUser = users.findIndex((index)=> index.email === email)
          let productsFilter = products?.filter((product) =>{
           return users[indexUser].shoppinProducts.some((shoppinProduct)=> shoppinProduct.id === product.id && shoppinProduct.producByEmail === product.producByEmail)
@@ -91,7 +91,7 @@ export const FormularioInicio = () => {
 
     <Form.Group className="mb-3" controlId="formBasicPassword">
       <Form.Label>Contraseña</Form.Label>
-      <Form.Control type="password" placeholder="Contraseña" 
+      <Form.Control type="password" placeholder="example@example.com" 
       value={password}
       onChange={(e)=>setPasswordForm(e.target.value)}
       disabled={disabledPassword}
