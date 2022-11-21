@@ -4,7 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Views Project
 
-https://637ad58be090c23804bee8ed--elaborate-gnome-d3add3.netlify.app/
+By Jesus Truyol
+https://637ae24d82dd304256a35061--elaborate-gnome-d3add3.netlify.app/
 
 ## Available Scripts
 
