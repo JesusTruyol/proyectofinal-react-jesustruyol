@@ -2,21 +2,17 @@ import { render } from "@testing-library/react";
 import React, { useState, useContext, useEffect } from "react";
 import { Button, Table } from "react-bootstrap";
 import ContextApi from "../../../context/ContextApiProider";
-
 import Modals from '../../../components/Modals'
-
 import "./cardShoppin.css";
 
-
 export default function TableProduct() {
-  const { change, setChange, products, users, userByEmail, totalPrice, setTotalPrice } = useContext(ContextApi);
+  const { change, setChange, products, users,setUsers, userByEmail, totalPrice, setTotalPrice } = useContext(ContextApi);
   const [basketProduct, setBasketProduct] = useState(null);
 
   const quantytiProduct = (option, id, producByEmail) => {
     setTotalPrice(operador(option, id, producByEmail));
     setChange(!change);
   };
-
 
   const operador=(operador, id, producByEmail)=>{
     let indexUser = users.findIndex((index)=> index.email === userByEmail)
@@ -33,6 +29,7 @@ export default function TableProduct() {
     }
 
   }
+ 
   const viewsCardShoppin= ()=>{
     let indexUser = users.findIndex((index)=> index.email === userByEmail)
     
@@ -46,13 +43,26 @@ export default function TableProduct() {
       if(product) return {...productFilter, quantity:users[indexUser].shoppinProducts[indexQuantity].quantity}
       })
 
-    console.log(resultProductShoppin)
       let totalPriceShoppin= resultProductShoppin.filter((product) => product.quantity > 0)
        .reduce((total, product)=>  total + product.price *product.quantity ,0)
-    setBasketProduct(resultProductShoppin);
+    
     setTotalPrice(totalPriceShoppin.toLocaleString("es-CL"))
-
+    setBasketProduct(resultProductShoppin);
   }
+
+  const clearProduct = (id,producByEmail) => {
+    console.log(userByEmail)
+    console.log(users)
+    let indexUser = users.findIndex((index)=> index.email === userByEmail)
+    users[indexUser].shoppinProducts= users[indexUser].shoppinProducts.filter((shoppinProduct)=> shoppinProduct.id !== id && shoppinProduct.producByEmail !== producByEmail)
+    console.log(users[indexUser])
+    setUsers(users)
+    setChange(!change);
+    viewsCardShoppin();
+    
+  };
+
+
   useEffect(() => {
     viewsCardShoppin()
   }, [change]);
@@ -95,10 +105,7 @@ export default function TableProduct() {
                   <div
                     className="operador mx-1"
                     onClick={() => 
-                      render(
-                      <Modals title={"Información"}  text={'Producto Actualizado'}
-                       />
-                      )}
+                      clearProduct(product.id ,product.producByEmail)}
                   >
                     🗑️
                   </div>
@@ -111,7 +118,7 @@ export default function TableProduct() {
       </Table>
       <div><h2>Total a pagar: ${totalPrice}</h2></div>
       <Button
-      onClick={() =>render(<Modals title={"Información"}  text={'Producto Actualizado'}/>)}
+      onClick={() =>render(<Modals title={"Información"}  text={'Aquí se debe redirigir al proceso de pago de los productos'}/>)}
       >
         Ir a pagar
       </Button>

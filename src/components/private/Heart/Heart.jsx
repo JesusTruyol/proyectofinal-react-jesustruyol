@@ -25,8 +25,7 @@ export default function Heart({filled, idProduct, producByEmail}) {
       setUsers(users)
       console.log(users)
     }
-    
-    
+     
     console.log('cambio')
     
     setChange(!change)

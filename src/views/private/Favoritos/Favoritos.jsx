@@ -1,9 +1,7 @@
 import React,{useEffect, useContext} from 'react'
 import ContextApi from '../../../context/ContextApiProider'
-
-
-import '../Publicaciones/publicaciones.css'
 import Cards from '../../../components/private/Cards/Cards'
+import '../Publicaciones/publicaciones.css'
 
 const Publicaciones = () => {
   const {products, change}=useContext(ContextApi);
@@ -11,9 +9,9 @@ const Publicaciones = () => {
   useEffect(()=>{
     
   },[change])
+
   return (
     <div className="container-main-private">
-
       <div className="container-productos">
         <div className="productos">
         {productFavorite?.map((favorite,index)=>(

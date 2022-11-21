@@ -63,9 +63,10 @@ const ContextApiProvider = ({children}) => {
     })
     setFavoriteProducts(emailusuarios)
   }
-
+ 
   useEffect(()=>{
     getDataApi();
+    
   },[])
   
   return (

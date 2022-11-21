@@ -14,7 +14,6 @@ const Private = () => {
 
           <Navbar/>
           <div className='img-bg'></div>
-
           <Routes>
             <Route path='/tienda' element={<Tienda/>}/>
             <Route path='/tienda/filtros/:idCategory' element={<TiendaFiltros/>}/>

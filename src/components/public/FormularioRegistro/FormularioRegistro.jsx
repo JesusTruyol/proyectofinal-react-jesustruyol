@@ -24,26 +24,16 @@ export const FormularioRegistro = () => {
 
   const setEmailForm= (value) => {
     setEmail(value)
-    // let validation = db.validEmailForm(value)
-    // setDisabledPassword(!validation)
-    setDisabledPassword(false)
-    
+    let validation = db.validEmailForm(value)
+    setDisabledPassword(!validation) 
   }
-
-  
 
   const setPasswordForm = (value) =>{
     setPassword(value)
-    // let validation = db.validPasswordForm(value)
-    // setDisabledPassword2(!validation)
-    setDisabledPassword2(false)
+    let validation = db.validPasswordForm(value)
+    setDisabledPassword2(!validation)
     confirmarContraseña({password:value, password2:password2})
-    
   }
-
-
-
-
 
   const setPassword2Form=(value)=>{
     setPassword2(value)
@@ -105,8 +95,6 @@ export const FormularioRegistro = () => {
     
     }
   }
-
-  
 
   return (
     <Form >

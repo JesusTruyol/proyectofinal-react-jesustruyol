@@ -10,10 +10,9 @@ export default function NavigateBar() {
   const { setAuth, users, userByEmail, setUserByEmail,totalPrice } =
     useContext(ContextApi);
 
-  const setActiveClass = ({ isActive }) =>
-    isActive
-      ? "dropdown-item active-link text-decoration-none"
-      : "dropdown-item not-active-link text-decoration-none";
+  const setActiveClass = ({ isActive }) =>{
+    if(isActive)return "dropdown-item active-link text-decoration-none"
+    return "dropdown-item not-active-link text-decoration-none"}
   let indexUser = users.findIndex((index) => index.email === userByEmail);
   let user = users[indexUser];
 
@@ -31,7 +30,15 @@ export default function NavigateBar() {
           </NavLink>
         </Nav>
         <Nav className="card-dropdown">
-          <NavLink className={ setActiveClass } to='/private/perfil/cardShoppin'><h6>🛒 ${ totalPrice}</h6></NavLink>
+          <div className="card-shoppin">
+          <NavLink 
+            className="text-decoration-none" 
+            to='/private/perfil/cardShoppin'>
+              <h6>
+                <i className="fa-solid fa-cart-shopping me-2"></i>
+                 ${ totalPrice}</h6>
+          </NavLink>
+          </div>
           <div>
           
             <Dropdown

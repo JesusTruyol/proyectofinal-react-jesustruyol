@@ -7,14 +7,8 @@ import "./perfil.css";
 
 const Perfil = () => {
   const {products, setProducts, change, setChange,users,setUsers, userByEmail, setUserByEmail}=useContext(ContextApi)
-
-  
-
-
-
   const resultUserPerfil= users?.filter((user)=> user.email === userByEmail);
   const userPerfil= resultUserPerfil[0]
-
   const [nameUser, setNameUSer]= useState(userPerfil.nameUser);
   const [name, setName]= useState(userPerfil.name)
   const [region,setRegion]=useState(userPerfil.region)
@@ -24,12 +18,10 @@ const Perfil = () => {
   const [phono, setPhono]= useState(userPerfil.phono)
   const [description, setDescription]= useState(userPerfil.description)
   const [imgUser, setImgUser]= useState(userPerfil.imgUser) 
-
   const [regiones,setRegiones]=useState([])
   const [provincias,setProvincias]=useState([])
   const [comunas,setComunas]=useState([])
 
-  
   const getUbicacion = () => {
     const getregiones = getRegions();
     const nameRegiones = getregiones
@@ -57,8 +49,6 @@ const Perfil = () => {
     setComunas(nameComunas);
   };
 
- 
-  
   const changeRegion = (value) => {
     setRegion(value);
     setProvincia("");
@@ -73,7 +63,6 @@ const Perfil = () => {
 
   const changeImgUser= (event)=>{
     
-
       let file = event.target.files[0];
       let reader = new FileReader();
       reader.onload = function(event) {
@@ -93,8 +82,6 @@ const Perfil = () => {
         return product
       })
       setProducts(resultProduct)
-      
-      
       setUserByEmail(email)
     }
     let resultUsers= users.map((user)=>{
@@ -116,8 +103,7 @@ const Perfil = () => {
     setChange(!change)
     // setUsers()
   }
-
-
+  
   useEffect(() => {
     getUbicacion();
 

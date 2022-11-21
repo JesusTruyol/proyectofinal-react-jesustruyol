@@ -10,7 +10,7 @@ import db from '../../../js/database'
 
 
 export const FormularioInicio = () => {
-    const {setAuth, setKey, users, setUserByEmail}= useContext(ContextApi)
+    const {setAuth, setKey, users,products, userByEmail,setUserByEmail,setTotalPrice}= useContext(ContextApi)
     const [email,setEmail]= useState("")
     const [password,setPassword]= useState("")
     const [disabledPassword, setDisabledPassword]= useState(true)
@@ -19,26 +19,42 @@ export const FormularioInicio = () => {
 
     const setEmailForm= (value) => {
       setEmail(value)
-      // let validation = db.validEmailForm(value)
-      // setDisabledPassword(!validation)
-      setDisabledPassword(false)
+      let validation = db.validEmailForm(value)
+      setDisabledPassword(!validation)
+      
       
   
     }
 
     const setPasswordForm = (value) =>{
       setPassword(value)
-      // let validation = db.validPasswordForm(value)
-      // setDisabledButton(!validation)
-      setDisabledButton(false)
+      let validation = db.validPasswordForm(value)
+      setDisabledButton(!validation)
+      
     }
 
-
+    const totalPriceShoppin=()=>{
+      console.log('inicio precio')
+      let indexUser = users.findIndex((index)=> index.email === email)
+         let productsFilter = products?.filter((product) =>{
+          return users[indexUser].shoppinProducts.some((shoppinProduct)=> shoppinProduct.id === product.id && shoppinProduct.producByEmail === product.producByEmail)
+      });
+      let resultProductShoppin = productsFilter.map((productFilter)=> {
+        let product= users[indexUser].shoppinProducts.some((shoppinProduct)=> shoppinProduct.id === productFilter.id && shoppinProduct.producByEmail === productFilter.producByEmail)
+        let indexQuantity= users[indexUser].shoppinProducts.findIndex((index)=> index.id === productFilter.id && index.producByEmail === productFilter.producByEmail)
+        if(product) return {...productFilter, quantity:users[indexUser].shoppinProducts[indexQuantity].quantity}
+        })
+      let totalPriceShoppin= resultProductShoppin.filter((product) => product.quantity > 0)
+         .reduce((total, product)=>  total + product.price *product.quantity ,0)
+         console.log(totalPriceShoppin)
+      setTotalPrice(totalPriceShoppin.toLocaleString("es-CL"))
+    }
 
     const inicioSesion=async()=>{
         
       if ([...users.entries()].find(([id, doc]) => doc.email === email && doc.password === password)){
         //Usuario Ok
+        totalPriceShoppin();
         setAuth(true)
         setUserByEmail(email)
         setEmail('')

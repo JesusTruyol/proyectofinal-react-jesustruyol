@@ -11,7 +11,6 @@ export default function Modals({title,text}){
   return (
     <>
      
-
       <Modal show={show} onHide={handleOK}>
         <Modal.Header closeButton>
           <Modal.Title>{title}</Modal.Title>

@@ -14,7 +14,7 @@ const Footer = () => {
      </div>
 
      <div className="footer-derechos">
-      <p className="m-0">© Jesus truyol Derechos y Zurdos reservados</p>
+      <p className="m-0">© Jesus Truyol Derechos y Zurdos reservados</p>
      </div>
     </div>
   )

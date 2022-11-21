@@ -9,10 +9,9 @@ const CardsNew = ({img, alt, idProduct, filled, nameProduct, price, condition, p
   
   const clear=(idProduct)=>{
     setProducts(products.filter((product) => product.id !== idProduct))
-
-
     setChange(!change);
   }
+  
   return (
 
     <div className="card-container">

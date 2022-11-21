@@ -9,8 +9,6 @@ const CarouselInicio = ({cardsViews}) => {
 
   const carouselProduc= ()=>{
     
-    ;
-    
     let result= products.map((product)=>{
       let index = users.findIndex((index)=> index.email === userByEmail)
       product.producByEmail === userByEmail? product.iconFavoriteActive= false: product.iconFavoriteActive= true
@@ -27,12 +25,7 @@ const CarouselInicio = ({cardsViews}) => {
       index = products.findIndex((index)=> index.id=== product.id && index.producByEmail === product.producByEmail);
       products[index].filled=false
 
-      // users[index].favoriteProducts= users[index].favoriteProducts.filter((favoriteproduct)=> !(favoriteproduct.id === id && favoriteproduct.producByEmail === producByEmail));
-      // index = products.findIndex((index)=> index.id=== id && index.producByEmail === producByEmail);
-      // console.log(index)
-      // products[index].filled=false
-      // setUsers(users)
-      // console.log(users)
+
     }}
 
     return product
@@ -43,8 +36,8 @@ const CarouselInicio = ({cardsViews}) => {
   
   useEffect(()=>{
     
-
   },[change])
+  
   return (
     <Carousel wrapAround={true} slidesToShow={cardsViews} autoplay={true} autoplayInterval={4500} 
     renderCenterLeftControls={({ previousDisabled, previousSlide }) => (
@@ -60,7 +53,6 @@ const CarouselInicio = ({cardsViews}) => {
     >
       {carouselProduc()?.map((product, index) =>  (
 
-        
         <Cards 
           key={index} 
           img={product.img} 

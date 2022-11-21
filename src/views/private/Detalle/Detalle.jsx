@@ -6,24 +6,49 @@ import Heart from "../../../components/private/Heart/Heart";
 import Button from 'react-bootstrap/Button'
 import "./detalle.css";
 const Detalle = () => {
-  // const {products, setProducts, change, setChange}= useContext(ContextApi)
+  
   const { idProduct, producByEmail } = useParams();
-  const {products,users, change}= useContext(ContextApi)
+  const {users,products,change,setChange,setUsers, userByEmail, setTotalPrice}= useContext(ContextApi)
   console.log(idProduct)
   console.log(producByEmail)
   console.log(products)
   let indexProduct = products.findIndex((index)=> index.id === idProduct && index.producByEmail === producByEmail);
-  
-  
-  
-  console.log(indexProduct)
   let productFavorite= products;
   productFavorite[indexProduct].filled= !productFavorite[indexProduct].filled;
   let indexUser = users.findIndex((index)=> index.email === producByEmail);
   let user=users[indexUser];
-  useEffect(()=>{
+
+  const addProductShoppin=()=>{
+    let indexUser = users.findIndex((index)=> index.email === userByEmail)
+    users[indexUser].shoppinProducts= [... users[indexUser].shoppinProducts, {
+          id:idProduct,
+          producByEmail:producByEmail,
+          quantity:1
+        }
+      ]
+
+    setUsers(users)
     
+    let productsFilter = products?.filter((product) =>{
+        return users[indexUser].shoppinProducts.some((shoppinProduct)=> shoppinProduct.id === product.id && shoppinProduct.producByEmail === product.producByEmail)
+    });
+    let resultProductShoppin = productsFilter.map((productFilter)=> {
+      let product= users[indexUser].shoppinProducts.some((shoppinProduct)=> shoppinProduct.id === productFilter.id && shoppinProduct.producByEmail === productFilter.producByEmail)
+      let indexQuantity= users[indexUser].shoppinProducts.findIndex((index)=> index.id === productFilter.id && index.producByEmail === productFilter.producByEmail)
+      if(product) return {...productFilter, quantity:users[indexUser].shoppinProducts[indexQuantity].quantity}
+      })
+
+      let totalPriceShoppin= resultProductShoppin.filter((product) => product.quantity > 0)
+       .reduce((total, product)=>  total + product.price *product.quantity ,0)
+    
+    setTotalPrice(totalPriceShoppin.toLocaleString("es-CL"))
+    setChange(!change)
+  }
+
+  useEffect(()=>{
+    // eslint-disable-next-line
   },[change])
+  
   return (
     <div className="container-main-private">
       
@@ -53,7 +78,9 @@ const Detalle = () => {
         </div>
         <div className="vendedor-comprar">
           <p>Vendedor: {user.nameUser}</p>
-          <Button>Comprar</Button>
+          <Button onClick={()=> addProductShoppin()}>
+            <i className="fa-solid fa-cart-shopping"></i>
+          </Button>
         </div>
         
       </div>

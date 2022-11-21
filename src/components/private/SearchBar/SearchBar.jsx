@@ -53,9 +53,7 @@ const SearchBar = () => {
             value={inputSearch}
             onChange={(e) => setInputForm(e.target.value)}
           />
-          {/* <Form.Control id="form-control-search" className='form-control-search'
-          placeholder="Busca miles de productos por su nombre"
-        /> */}
+
           <Button className="btn-search" id="button-addon2" 
           
           >

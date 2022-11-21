@@ -14,7 +14,6 @@ const Tienda = () => {
   // eslint-disable-next-line 
   },[])
 
-
   return (
     <div className='container-tienda'>
 

@@ -11,12 +11,7 @@ const AddProducts = () => {
   const { idProduct, producByEmail } = useParams();
   console.log(idProduct)
   console.log(producByEmail)
-
-  
-
-
   const {user,change, setChange, products, setProducts, userByEmail, categorys}= useContext(ContextApi)
-
   const nameCtegorias = categorys?.map((category) => category.category);
   const [category, setCategory] = useState("");
   const [nameProductAdd, setNameProductAdd] = useState("");
@@ -119,14 +114,11 @@ const addProducts=()=>{
     return
   }
   
-  render(<Modals  title={"Advertencia"}  text={'El nombre del producto ya existe'}/>);
-  
+  render(<Modals  title={"Advertencia"}  text={'El nombre del producto ya existe'}/>); 
 }
   
 // 
 useEffect(()=>{
-
-  
 
 },[change])
 

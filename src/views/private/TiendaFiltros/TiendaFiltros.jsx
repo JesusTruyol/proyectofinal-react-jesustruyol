@@ -23,7 +23,6 @@ const TiendaFiltros = () => {
     nameProductFilterSearch, setnameProductFilterSearch
   } = useContext(ContextApi);
 
-  
   const [order, setOrder]= useState("")
   const [region,setRegion]= useState("")
   const [provincia,setProvincia]= useState("")
@@ -32,12 +31,9 @@ const TiendaFiltros = () => {
   const [checkUsado, setCheckUsado] = useState(false);
   const [checkNuevo, setCheckNuevo] = useState(false);
   const [resultFilter, setResultFilter]= useState([])
-  
-
   const nameCtegorias = categorys?.map((category) => category.category);
   const ordenar = ["Precio Menor", "Precio Mayor"];
   
-
   const getUbicacion = () => {
     const getregiones = getRegions();
     const nameRegiones = getregiones?.map((regionName) => regionName.name).sort();
@@ -57,23 +53,6 @@ const TiendaFiltros = () => {
   let productFilter= nameProductFilterSearch
   const filters = () => {
     
-    // console.log(nameProductFilterSearch)
-    // if(nameProductFilterSearch.length > 0){
-    //   console.log(nameProductFilterSearch)
-    //   let result= products.filter ((product)=> product.nameProduct === nameProductFilterSearch[0].nameProduct)
-    //   let resultProduc=result[0]
-    //   let index = users.findIndex((index)=> index.email === resultProduc.producByEmail);
-    //   let user= users[index]
-      
-    //   setCategory(resultProduc.category)
-    //   setRegion(user.region)
-    //   setProvincia(user.provincia);
-    //   setComuna(user.comuna);
-    //   setnameProductFilterSearch([])
-
-    //   setResultFilter(result)
-    //   setChange(!change)
-    // }
      let result= products.filter(
 
       (product) =>
@@ -103,13 +82,10 @@ const TiendaFiltros = () => {
             if(user.region !== region ) setRegion(user.region);
             if(user.provincia !== provincia )setProvincia(user.provincia);
             if(user.comuna !== comuna ) setComuna(user.comuna);
-                      
-            
+                       
           }
         }
-
-
-        
+  
         return validaciones.every(value => value);
       }
     );
@@ -188,14 +164,6 @@ const TiendaFiltros = () => {
             </Form.Select>
           </Form.Group>
 
-          {/* <div onChange={() => changeCategory()}>
-            <Selects
-              options={nameCtegorias}
-              name={"Categorías"}
-              valueSelect={category}
-              setvalueSelect={setCategory}
-            />
-          </div> */}
           <Form.Group className="mb-3">
           <Form.Label>Ordenar Por</Form.Label>
             <Form.Select
@@ -208,13 +176,6 @@ const TiendaFiltros = () => {
             ))}
             </Form.Select>
           </Form.Group>
-
-          {/* <div onChange={() => changeOrder()}>
-          <Selects options={ordenar} name={"Ordenar Por"}
-          valueSelect={order}
-          setvalueSelect={setOrder}
-          />
-          </div> */}
 
           <Form.Group className="mb-3">
           <Form.Label>Region</Form.Label>
@@ -229,15 +190,6 @@ const TiendaFiltros = () => {
             </Form.Select>
           </Form.Group>
 
-          {/* <div onChange={() => changeRegion()}>
-            <Selects
-              options={regiones ? regiones : [""]}
-              name={"Region"}
-              valueSelect={region}
-              setvalueSelect={setRegion}
-            />
-          </div> */}
-
         <Form.Group className="mb-3">
           <Form.Label>Provincia</Form.Label>
             <Form.Select
@@ -251,16 +203,6 @@ const TiendaFiltros = () => {
             </Form.Select>
           </Form.Group>
 
-          {/* <div onChange={() => changeProvincia()}>
-            <Selects
-              options={provincias ? provincias : [""]}
-              name={"Provincia"}
-              valueSelect={provincia}
-              setvalueSelect={setProvincia}
-            />
-          </div> */}
-
-
           <Form.Group className="mb-3">
           <Form.Label>Comuna</Form.Label>
             <Form.Select
@@ -273,15 +215,6 @@ const TiendaFiltros = () => {
             ))}
             </Form.Select>
           </Form.Group>
-
-          {/* <div>
-            <Selects
-              options={comunas ? comunas : [""]}
-              name={"Comuna"}
-              valueSelect={comuna}
-              setvalueSelect={setComuna}
-            />
-          </div> */}
 
           <Form.Check
             type={"checkbox"}
