@@ -91,7 +91,7 @@ export const FormularioInicio = () => {
 
     <Form.Group className="mb-3" controlId="formBasicPassword">
       <Form.Label>Contraseña</Form.Label>
-      <Form.Control type="password" placeholder="example@example.com" 
+      <Form.Control type="password" placeholder="Contraseña" 
       value={password}
       onChange={(e)=>setPasswordForm(e.target.value)}
       disabled={disabledPassword}
